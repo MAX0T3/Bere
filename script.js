@@ -3,7 +3,7 @@ const response = document.getElementById('response');
 const dinoGameContainer = document.getElementById('dino-game-container');
 
 document.getElementById('yesBtn').addEventListener('click', function() {
-    response.innerText = "¡Gracias Bere! Ya los espero con ansias 😋";
+    response.innerText = "¡Gracias Bere! Ya los espero con ansias ";
     launchConfetti();
     showDinoGame();
 });
@@ -14,7 +14,7 @@ document.getElementById('noBtn').addEventListener('click', function() {
 });
 
 function showSecondQuestion() {
-    response.innerText = "Ándale, Bere, piensa en el hambriado dr tu hijo mats";
+    response.innerText = "Ándale, Bere, piensa en el mi";
 
     // Crear botones adicionales de "Sí" y "No"
     const yesBtn2 = document.createElement('button');
