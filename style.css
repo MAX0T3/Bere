@@ -4,9 +4,9 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #ffe0f0; /* Rosa claro */
+    background-color: #adadad; /* Rosa claro */
     margin: 0;
-    color: #d6336c; /* Rosa oscuro */
+    color: #000000; /* Rosa oscuro */
 }
 
 .container {
@@ -14,7 +14,7 @@ body {
     background-color: #fff3f8; /* Fondo suave */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
     margin-top: 50px;
 }
 
@@ -25,19 +25,19 @@ button {
     cursor: pointer;
     border: none;
     border-radius: 5px;
-    background-color: #ff6bcb; /* Rosa vibrante */
+    background-color: #000000;
     color: white;
     transition: background-color 0.3s ease;
 }
 
 button:hover {
-    background-color: #ff8ed1; /* Rosa más suave */
+    background-color: #000000;
 }
 
 #response {
     margin-top: 20px;
     font-size: 18px;
-    color: #d6336c;
+    color: #000000;
 }
 
 #dino-game-container {
@@ -52,5 +52,5 @@ button:hover {
     height: 400px;
     max-width: 90%;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
 }
