@@ -20,7 +20,7 @@ function showSecondQuestion() {
     const yesBtn2 = document.createElement('button');
     yesBtn2.innerText = "Sí";
     yesBtn2.addEventListener('click', () => {
-        response.innerText = "¡traaaais todo RISITOOOS🏳️‍⚧️ ";
+        response.innerText = "TIRA PARO RISITOOOS🏳️‍⚧️ ";
         launchConfetti();
         showDinoGame();
         clearButtons();
