@@ -1,56 +1,81 @@
-/* Estilos básicos */
-body {
-    font-family: Arial, sans-serif;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #adadad; /* Rosa claro */
-    margin: 0;
-    color: #000000; /* Rosa oscuro */
+const container = document.querySelector('.container');
+const response = document.getElementById('response');
+const dinoGameContainer = document.getElementById('dino-game-container');
+
+document.getElementById('yesBtn').addEventListener('click', function() {
+    response.innerText = "¡Gracias Bere! Ya los espero con ansias 😋";
+    launchConfetti();
+    showDinoGame();
+});
+
+document.getElementById('noBtn').addEventListener('click', function() {
+    response.innerText = "";
+    showSecondQuestion();
+});
+
+function showSecondQuestion() {
+    response.innerText = "Ándale, Bere, piensa en el hambriado dr tu hijo mats";
+
+    // Crear botones adicionales de "Sí" y "No"
+    const yesBtn2 = document.createElement('button');
+    yesBtn2.innerText = "Sí";
+    yesBtn2.addEventListener('click', () => {
+        response.innerText = "¡traaaais todo RISITOOOS🏳️‍⚧️ ";
+        launchConfetti();
+        showDinoGame();
+        clearButtons();
+    });
+
+    const noBtn2 = document.createElement('button');
+    noBtn2.innerText = "No";
+    noBtn2.addEventListener('click', () => {
+        response.innerText = "";
+        showFinalOption();
+    });
+
+    // Añadir los nuevos botones
+    container.appendChild(yesBtn2);
+    container.appendChild(noBtn2);
 }
 
-.container {
-    text-align: center;
-    background-color: #fff3f8; /* Fondo suave */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgb(0, 0, 0, 0.1);
-    margin-top: 50px;
+function showFinalOption() {
+    response.innerText = " bereee andale si o si";
+
+    // Crear botón final de "Sí o sí"
+    const finalYesBtn = document.createElement('button');
+    finalYesBtn.innerText = "Sí o Si bere RISITOS🏳️‍⚧️";
+    finalYesBtn.addEventListener('click', () => {
+        response.innerText = "¡traiiis todo bereee los esparmamos con ansias";
+        launchConfetti();
+        showDinoGame();
+        clearButtons();
+    });
+
+    // Añadir el botón "Sí o sí" al contenedor
+    container.appendChild(finalYesBtn);
 }
 
-button {
-    padding: 10px 20px;
-    font-size: 16px;
-    margin: 10px;
-    cursor: pointer;
-    border: none;
-    border-radius: 5px;
-    background-color: #000000;
-    color: white;
-    transition: background-color 0.3s ease;
+function launchConfetti() {
+    // Configuración del confeti
+    confetti({
+        particleCount: 100,
+        spread: 70,
+        origin: { y: 0.6 },
+        colors: ['#ff6bcb', '#ff8ed1', '#ffe0f0']
+    });
 }
 
-button:hover {
-    background-color: #000000;
+function showDinoGame() {
+    // Mostrar el contenedor del juego del dinosaurio
+    dinoGameContainer.style.display = 'block';
 }
 
-#response {
-    margin-top: 20px;
-    font-size: 18px;
-    color: #000000;
-}
-
-#dino-game-container {
-    margin-top: 30px;
-    text-align: center;
-    width: 100%;
-}
-
-#dino-game {
-    border: none;
-    width: 600px;
-    height: 400px;
-    max-width: 90%;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgb(0, 0, 0, 0.2);
+function clearButtons() {
+    // Elimina todos los botones excepto los originales
+    const buttons = container.querySelectorAll('button');
+    buttons.forEach(button => {
+        if (button.id !== 'yesBtn' && button.id !== 'noBtn') {
+            container.removeChild(button);
+        }
+    });
 }
