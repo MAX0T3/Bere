@@ -43,9 +43,9 @@ function showFinalOption() {
 
     // Crear botón final de "Sí o sí"
     const finalYesBtn = document.createElement('button');
-    finalYesBtn.innerText = "Sí o Si bere RISITOS🏳️‍⚧️";
+    finalYesBtn.innerText = "NO TIENES OPCION RISITOS🏳️‍⚧️";
     finalYesBtn.addEventListener('click', () => {
-        response.innerText = "¡traiiis todo bereee los esparmamos con ansias";
+        response.innerText = "ESOOOO ES TODODODOTODO";
         launchConfetti();
         showDinoGame();
         clearButtons();
