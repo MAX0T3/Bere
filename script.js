@@ -20,7 +20,7 @@ function showSecondQuestion() {
     const yesBtn2 = document.createElement('button');
     yesBtn2.innerText = "Sí";
     yesBtn2.addEventListener('click', () => {
-        response.innerText = "ESO ES TODOOO RISITOOOS🏳️‍⚧️ ";
+        response.innerText = "ESO ES TODOOO RISITOOOS🏳️‍🌈 ";
         launchConfetti();
         showDinoGame();
         clearButtons();
@@ -43,7 +43,7 @@ function showFinalOption() {
 
     // Crear botón final de "Sí o sí"
     const finalYesBtn = document.createElement('button');
-    finalYesBtn.innerText = "NO TIENES OPCION RISITOS🏳️‍⚧️";
+    finalYesBtn.innerText = "NO TIENES OPCION RISITOS🏳️‍🌈";
     finalYesBtn.addEventListener('click', () => {
         response.innerText = "ESOOOO ES TODODODOTODO";
         launchConfetti();
